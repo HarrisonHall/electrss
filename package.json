@@ -1,0 +1,25 @@
+{
+  "name": "electrss",
+  "version": "1.0.0",
+  "description": "Popup RSS feed reader.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/harrisonhall/electrss",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^2.0.0"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1"
+  }
+}
