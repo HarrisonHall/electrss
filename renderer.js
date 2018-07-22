@@ -22,8 +22,8 @@ $(document).ready(function() {
 					if (typeof title !== 'undefined' || title === null) {
 						counter++;
 						document.getElementById('purerss').innerHTML += "<br>" + counter;
-						document.getElementById('purerss').innerHTML += '<br><span style="color:#50fa7b">' + title + "</span>";
-						document.getElementById('purerss').innerHTML += "<br>" + link;
+						document.getElementById('purerss').innerHTML += ' <a style="color:#50fa7b" href="'+link+'">' + title + "</a>";
+						//document.getElementById('purerss').innerHTML += "<br>" + link;
 						document.getElementById('purerss').innerHTML += "<br>" + description;
 						document.getElementById('purerss').innerHTML += "<br>" + entry;
 					}
