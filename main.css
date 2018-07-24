@@ -26,7 +26,7 @@ p {
     border: 10px #bd93f9;
     padding: 10px;
     margin: 10px;
-	border-radius: 25px;
+	border-radius: 10px;
 }
 
 /*Scrollbars*/
@@ -40,12 +40,12 @@ p {
  
 ::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px; 
-    border-radius: 25px;
+    border-radius: 10px;
 	background: var(--bgcolor);
 }
  
 ::-webkit-scrollbar-thumb {
-    border-radius: 25px;
+    border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px;
 	background: var(--scrollcolor);
 }
