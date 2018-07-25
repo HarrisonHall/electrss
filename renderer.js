@@ -2,7 +2,7 @@
 
 //custom
 var textcolor = "#8be9fd";
-var titlecolor = "#ffb86c";
+var titlecolor = "#50fa7b";
 
 //Credit to jeancroy from https://discuss.atom.io/t/opening-a-browser-window-from-an-a-in-the-app/28491/5
 var shell = require('electron').shell;

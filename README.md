@@ -1,6 +1,5 @@
 # electrss
-Popup RSS feed powered by electron.
-NOTE: Testing will be deleted before made public. 
+Popup RSS (2.0) feed powered by electron.
 ## use
 * Customizable popup RSS feed that can be used with Reddit, Twitter, Gmail, etc...
 ## install
