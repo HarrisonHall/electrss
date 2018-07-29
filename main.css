@@ -59,6 +59,11 @@ body {
 
 p {
 	text-align: center;
+	color: #f8f8f2;
+}
+
+a {
+	color: inherit;
 }
 
 #purerss {

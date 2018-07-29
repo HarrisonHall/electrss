@@ -1,20 +1,15 @@
 //Renders window and parses rss feeds
 
-//custom
-var textcolor = "#8be9fd";
-var titlecolor = "#50fa7b";
 
-//Credit to jeancroy from https://discuss.atom.io/t/opening-a-browser-window-from-an-a-in-the-app/28491/5
+//Credit to jeancroy for external open from https://discuss.atom.io/t/opening-a-browser-window-from-an-a-in-the-app/28491/5
 var shell = require('electron').shell;
 $(document).on('click', 'a[href^="http"]', function(event) {
     event.preventDefault();
     shell.openExternal(this.href);
 });
 
-
 var RSSFeed = {};
-RSSFeed.rssList = ["https://www.reddit.com/r/all.rss","http://news.ycombinator.com/rss","https://www.nasa.gov/rss/dyn/breaking_news.rss","https://codek.tv/feed/"];
-//RSSFeed.iterator = 0;
+RSSFeed.rssList = config.rssList;
 console.log(RSSFeed);
 $(document).ready(function() {
 	for (i = 0; i < RSSFeed.rssList.length; i++){
@@ -32,6 +27,7 @@ $(document).ready(function() {
 					console.log("title: \t" + title);
 					link = parsed.find("link").text();
 					description = parsed.find("description").text();
+                    date = parsed.find("pubDate").text();
 					image = parsed.find("image").text();
 					console.log("image: \t" + image);
 					
@@ -39,10 +35,11 @@ $(document).ready(function() {
 
 					if (typeof title !== 'undefined' || title === null) {
 						counter++;
-						document.getElementById('rss_spot').innerHTML += '<div id="purerss">' + counter
-						+ ' <a style="color:'+titlecolor+'" href="'+link+'">' + title + "</a>"
-						+ "<br>" + ' <a style="color:'+textcolor+'">' + description + "</a>" + '</div>';
-
+						document.getElementById('rss_spot').innerHTML += '<div id="purerss">'
+							+ '<a style="color:'+config.numcolor+'">' + counter  + "</a>" + ' '
+							+ '<a style="color:'+config.titlecolor+'" href="'+link+'">' + title + "</a>"
+							+ "<br>" + ' <a style="color:'+config.textcolor+'">' + description + "</a>"
+							+ '<br>' + '<a style="color:'+config.datecolor+'">' + date + "</a>" + '</div>';
 					}
 				});
 			}});
