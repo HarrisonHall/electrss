@@ -5,6 +5,7 @@ Scrambled RSS 2.0 and Atom feed powered by electron.
 
 ## Use
 * Customizable popup RSS feed that can be used with RSS 2.0 and Atom feeds.
+* Install with `npm run package`
 
 ## Config
 * Colors can be set in main.css and config.js

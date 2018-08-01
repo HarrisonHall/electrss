@@ -1,10 +1,13 @@
 {
   "name": "electrss",
   "version": "1.0.0",
-  "description": "Popup RSS feed reader.",
+  "description": "Scrambled RSS feed reader.",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "webpack --progress --profile --colors --display-error-details --display-cached",
+    "package": "electron-packager . electrss --platform=linux --arch=x64",
+    "archive": "asar pack Linuxapp-linux-x64/resources/app Linuxapp-linux-x64/resources/app.asar"
   },
   "repository": "https://github.com/harrisonhall/electrss",
   "keywords": [
@@ -17,7 +20,9 @@
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^2.0.0"
+    "asar": "^0.14.3",
+    "electron": "^2.0.0",
+    "electron-packager": "^12.1.0"
   },
   "dependencies": {
     "jquery": "^3.3.1"
